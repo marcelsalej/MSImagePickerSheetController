@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MSImagePickerSheetController_Example' do
+  pod 'MSImagePickerSheetController', :path => '../'
+
+  target 'MSImagePickerSheetController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
