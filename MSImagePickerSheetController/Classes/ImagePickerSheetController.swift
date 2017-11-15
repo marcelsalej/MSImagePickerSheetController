@@ -239,7 +239,7 @@ public class ImagePickerSheetController: UIViewController {
         requestOptions.isSynchronous = true
         requestOptions.deliveryMode = .fastFormat
         
-        result.enumerateObjects { asset, _, stop in
+        result.enumerateObjects ({ (asset, _, stop) in
             defer {
                 if self.assets.count > fetchLimit {
                     stop.initialize(to: true)
@@ -252,7 +252,7 @@ public class ImagePickerSheetController: UIViewController {
                 }
             }
             
-        }
+        })
     }
     
     func requestImageForAsset(asset: PHAsset, completion: @escaping (_ image: UIImage?) -> ()) {
