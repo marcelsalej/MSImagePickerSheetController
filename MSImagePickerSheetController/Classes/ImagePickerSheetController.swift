@@ -21,7 +21,7 @@ public enum ImagePickerMediaType {
 @available(iOS 8.0, *)
 public class ImagePickerSheetController: UIViewController {
     
-    private lazy var sheetController: SheetController = {
+    lazy var sheetController: SheetController = {
         let controller = SheetController(previewCollectionView: self.previewCollectionView)
         controller.actionHandlingCallback = { [weak self] in
             self?.dismiss(animated: true, completion: {
@@ -55,7 +55,7 @@ public class ImagePickerSheetController: UIViewController {
         return collectionView
     }()
     
-    private var supplementaryViews = [Int: PreviewSupplementaryView]()
+    var supplementaryViews = [Int: PreviewSupplementaryView]()
     
     lazy var backgroundView: UIView = {
         let view = UIView()
@@ -74,7 +74,7 @@ public class ImagePickerSheetController: UIViewController {
     /// Maximum selection of images.
     public var maximumSelection: Int?
     
-    private var selectedImageIndices = [Int]() {
+    var selectedImageIndices = [Int]() {
         didSet {
             sheetController.numberOfSelectedImages = selectedImageIndices.count
         }
@@ -88,7 +88,7 @@ public class ImagePickerSheetController: UIViewController {
     /// The media type of the displayed assets
     public let mediaType: ImagePickerMediaType
     
-    private var assets = [PHAsset]()
+    var assets = [PHAsset]()
     
     private lazy var requestOptions: PHImageRequestOptions = {
         let options = PHImageRequestOptions()
@@ -107,7 +107,7 @@ public class ImagePickerSheetController: UIViewController {
     private let minimumPreviewHeight: CGFloat = 129
     private var maximumPreviewHeight: CGFloat = 129
     
-    private var previewCheckmarkInset: CGFloat {
+    var previewCheckmarkInset: CGFloat {
         return 12.5
     }
     
@@ -255,7 +255,7 @@ public class ImagePickerSheetController: UIViewController {
         }
     }
     
-    private func requestImageForAsset(asset: PHAsset, completion: @escaping (_ image: UIImage?) -> ()) {
+    func requestImageForAsset(asset: PHAsset, completion: @escaping (_ image: UIImage?) -> ()) {
         let targetSize = sizeForAsset(asset: asset, scale: UIScreen.main.scale)
         requestOptions.isSynchronous = false
         

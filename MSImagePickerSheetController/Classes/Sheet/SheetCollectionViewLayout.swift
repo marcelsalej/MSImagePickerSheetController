@@ -59,7 +59,7 @@ class SheetCollectionViewLayout: UICollectionViewLayout {
         super.invalidateLayout()
     }
     
-    func collectionViewContentSize() -> CGSize {
+    override func collectionViewContentSize() -> CGSize {
         return contentSize
     }
     

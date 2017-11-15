@@ -21,7 +21,7 @@ class AnimationController: NSObject {
     
     // MARK: - Animation
     
-    private func animatePresentation(context: UIViewControllerContextTransitioning) {
+    func animatePresentation(context: UIViewControllerContextTransitioning) {
         let containerView = context.containerView
         containerView.addSubview(imagePickerSheetController.view)
         
@@ -37,7 +37,7 @@ class AnimationController: NSObject {
         })
     }
     
-    private func animateDismissal(context: UIViewControllerContextTransitioning) {
+     func animateDismissal(context: UIViewControllerContextTransitioning) {
         let containerView = context.containerView
         
         UIView.animate(withDuration: transitionDuration(using: context), delay: 0, options: .curveEaseIn, animations: { () -> Void in

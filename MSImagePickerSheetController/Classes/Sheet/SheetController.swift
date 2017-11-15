@@ -51,11 +51,11 @@ class SheetController: NSObject {
     // MARK: - Data Source
     // These methods are necessary so that no call cycles happen when calculating some design attributes
     
-    private func numberOfSections() -> Int {
+     func numberOfSections() -> Int {
         return 2
     }
     
-    private func numberOfItemsInSection(section: Int) -> Int {
+     func numberOfItemsInSection(section: Int) -> Int {
         if section == 0 {
             return 1
         }
@@ -63,7 +63,7 @@ class SheetController: NSObject {
         return actions.count
     }
     
-    private func allIndexPaths() -> [IndexPath] {
+    func allIndexPaths() -> [IndexPath] {
         let s = numberOfSections()
         return (0 ..< s).map { (section: Int) -> (Int, Int) in (self.numberOfItemsInSection(section: section), section) }
             .flatMap { (numberOfItems: Int, section: Int) -> [IndexPath] in
@@ -88,7 +88,7 @@ class SheetController: NSObject {
     
     // MARK: - Design
     
-    private func attributesForItemAtIndexPath(indexPath: IndexPath) -> (corners: RoundedCorner, backgroundInsets: UIEdgeInsets) {
+    func attributesForItemAtIndexPath(indexPath: IndexPath) -> (corners: RoundedCorner, backgroundInsets: UIEdgeInsets) {
         let cornerRadius: CGFloat = 13
         let innerInset: CGFloat = 4
         var indexPaths = allIndexPaths()
@@ -119,7 +119,7 @@ class SheetController: NSObject {
         return (.None, UIEdgeInsets(top: 0, left: sheetInset, bottom: 0, right: sheetInset))
     }
     
-    private func fontForAction(action: ImagePickerAction) -> UIFont {
+    func fontForAction(action: ImagePickerAction) -> UIFont {
         if action.style == .Cancel {
             return UIFont.boldSystemFont(ofSize: 21)
         }
@@ -152,7 +152,7 @@ class SheetController: NSObject {
         reloadActionItems()
     }
     
-    private func handleAction(action: ImagePickerAction) {
+    func handleAction(action: ImagePickerAction) {
         actionHandlingCallback?()
         action.handle(numberOfImages: numberOfSelectedImages)
     }
