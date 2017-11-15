@@ -5,11 +5,17 @@
 [![License](https://img.shields.io/cocoapods/l/MSImagePickerSheetController.svg?style=flat)](http://cocoapods.org/pods/MSImagePickerSheetController)
 [![Platform](https://img.shields.io/cocoapods/p/MSImagePickerSheetController.svg?style=flat)](http://cocoapods.org/pods/MSImagePickerSheetController)
 
+## Description
+This is a converted pod to swift 4, initially developed by [ibrndr](https://github.com/lbrndnr/ImagePickerSheetController)
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+Swift 4
 
 ## Installation
 
@@ -22,7 +28,7 @@ pod 'MSImagePickerSheetController'
 
 ## Author
 
-m.salej, m.salej@sportradar.com
+Marcel Šalej, marcel.salej@icloud.com
 
 ## License
 
