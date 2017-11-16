@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MSImagePickerSheetController'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'ImagePickerSheetController updated to Swift 4'
   s.xcconfig    = { 'SWIFT_VERSION' => '4.0' }
 # This description is used to generate tags and improve search results.
