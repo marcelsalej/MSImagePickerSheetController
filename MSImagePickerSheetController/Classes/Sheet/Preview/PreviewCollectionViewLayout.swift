@@ -73,11 +73,6 @@ class PreviewCollectionViewLayout: UICollectionViewFlowLayout {
         return true
     }
     
-    func collectionViewContentSize() -> CGSize {
-        return contentSize
-    }
-    
-    
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         var contentOffset = proposedContentOffset
         if let indexPath = invalidationCenteredIndexPath {
@@ -86,7 +81,7 @@ class PreviewCollectionViewLayout: UICollectionViewFlowLayout {
                 contentOffset.x = frame.midX - collectionView.frame.width / 2.0
                 
                 contentOffset.x = max(contentOffset.x, -collectionView.contentInset.left)
-                contentOffset.x = min(contentOffset.x, collectionViewContentSize().width - collectionView.frame.width + collectionView.contentInset.right)
+                contentOffset.x = min(contentOffset.x, contentSize.width - collectionView.frame.width + collectionView.contentInset.right)
             }
             invalidationCenteredIndexPath = nil
         }

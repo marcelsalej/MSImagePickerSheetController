@@ -191,7 +191,7 @@ public class ImagePickerSheetController: UIViewController {
     
     // MARK: - Images
     
-    private func sizeForAsset(asset: PHAsset, scale: CGFloat = 1) -> CGSize {
+    func sizeForAsset(asset: PHAsset, scale: CGFloat = 1) -> CGSize {
         let proportion = CGFloat(asset.pixelWidth)/CGFloat(asset.pixelHeight)
         
         let imageHeight = maximumPreviewHeight - 2 * previewInset

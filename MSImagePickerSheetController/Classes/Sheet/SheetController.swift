@@ -71,7 +71,7 @@ class SheetController: NSObject {
         }
     }
     
-    private func sizeForSheetItemAtIndexPath(indexPath: IndexPath) -> CGSize {
+    func sizeForSheetItemAtIndexPath(indexPath: IndexPath) -> CGSize {
         let height: CGFloat = {
             if indexPath.section == 0 {
                 return previewHeight

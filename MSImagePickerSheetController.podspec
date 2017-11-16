@@ -25,7 +25,7 @@ This is an ImagePickerSheetController initially developed by ibrndnr converted t
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'm.salej' => 'marcel.salej@icloud.com' }
-  s.source           = { :git => 'https://github.com/salkovich/MSImagePickerSheetController.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/salkovich/MSImagePickerSheetController.git', :tag  => s.version.to_s, :branch => 'master' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
