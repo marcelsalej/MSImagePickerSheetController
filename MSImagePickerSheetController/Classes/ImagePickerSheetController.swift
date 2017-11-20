@@ -481,14 +481,15 @@ extension ImagePickerSheetController: UICollectionViewDelegateFlowLayout {
 // MARK: - UIViewControllerTransitioningDelegate
 
 extension ImagePickerSheetController: UIViewControllerTransitioningDelegate {
-    
-    public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return AnimationController(imagePickerSheetController: self, presenting: true)
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+         return AnimationController(imagePickerSheetController: self, presenting: true)
     }
     
-    public func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return AnimationController(imagePickerSheetController: self, presenting: false)
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+         return AnimationController(imagePickerSheetController: self, presenting: false)
     }
+    
+  
     
 }
 
