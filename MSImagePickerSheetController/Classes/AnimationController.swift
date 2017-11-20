@@ -9,12 +9,12 @@ import UIKit
 
 class AnimationController: NSObject {
     
-    let imagePickerSheetController: ImagePickerSheetController
+    let imagePickerSheetController: MSImagePickerSheetController
     let presenting: Bool
     
     // MARK: - Initialization
     
-    init(imagePickerSheetController: ImagePickerSheetController, presenting: Bool) {
+    init(imagePickerSheetController: MSImagePickerSheetController, presenting: Bool) {
         self.imagePickerSheetController = imagePickerSheetController
         self.presenting = presenting
     }

@@ -12,14 +12,14 @@ import Photos
 let previewInset: CGFloat = 5
 
 /// The media type an instance of ImagePickerSheetController can display
-public enum ImagePickerMediaType {
+public enum MSImagePickerMediaType {
     case Image
     case Video
     case ImageAndVideo
 }
 
 @available(iOS 8.0, *)
-public class ImagePickerSheetController: UIViewController {
+public class MSImagePickerSheetController: UIViewController {
     
     lazy var sheetController: SheetController = {
         let controller = SheetController(previewCollectionView: self.previewCollectionView)
@@ -86,7 +86,7 @@ public class ImagePickerSheetController: UIViewController {
     }
     
     /// The media type of the displayed assets
-    public let mediaType: ImagePickerMediaType
+    public let mediaType: MSImagePickerMediaType
     
     var assets = [PHAsset]()
     
@@ -113,7 +113,7 @@ public class ImagePickerSheetController: UIViewController {
     
     // MARK: - Initialization
     
-    public init(mediaType: ImagePickerMediaType) {
+    public init(mediaType: MSImagePickerMediaType) {
         self.mediaType = mediaType
         super.init(nibName: nil, bundle: nil)
         initialize()
@@ -366,7 +366,7 @@ public class ImagePickerSheetController: UIViewController {
 
 // MARK: - UICollectionViewDataSource
 
-extension ImagePickerSheetController: UICollectionViewDataSource {
+extension MSImagePickerSheetController: UICollectionViewDataSource {
     
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return assets.count
@@ -408,7 +408,7 @@ extension ImagePickerSheetController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 
-extension ImagePickerSheetController: UICollectionViewDelegate {
+extension MSImagePickerSheetController: UICollectionViewDelegate {
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let maximumSelection = maximumSelection {
@@ -458,7 +458,7 @@ extension ImagePickerSheetController: UICollectionViewDelegate {
 
 // MARK: - UICollectionViewDelegateFlowLayout
 
-extension ImagePickerSheetController: UICollectionViewDelegateFlowLayout {
+extension MSImagePickerSheetController: UICollectionViewDelegateFlowLayout {
     
     public func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let asset = assets[indexPath.section]
@@ -480,7 +480,7 @@ extension ImagePickerSheetController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - UIViewControllerTransitioningDelegate
 
-extension ImagePickerSheetController: UIViewControllerTransitioningDelegate {
+extension MSImagePickerSheetController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
          return AnimationController(imagePickerSheetController: self, presenting: true)
     }

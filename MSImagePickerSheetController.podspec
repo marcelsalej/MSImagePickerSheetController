@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MSImagePickerSheetController'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'ImagePickerSheetController updated to Swift 4'
   s.xcconfig    = { 'SWIFT_VERSION' => '4.0' }
 # This description is used to generate tags and improve search results.
@@ -32,9 +32,9 @@ This is an ImagePickerSheetController initially developed by ibrndnr converted t
 
   s.source_files = 'MSImagePickerSheetController/Classes/**/*'
   
-#s.resource_bundles = {
-#   'MSImagePickerSheetController' => ['MSImagePickerSheetController/Assets/*.png']
-# }
+    s.resource_bundles = {
+        'MSImagePickerSheetController' => ['MSImagePickerSheetController/Resources/*.xcassets']
+    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

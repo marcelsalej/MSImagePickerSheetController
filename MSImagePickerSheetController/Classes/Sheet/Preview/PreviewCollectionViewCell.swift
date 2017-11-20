@@ -26,7 +26,7 @@ class PreviewCollectionViewCell: UICollectionViewCell {
     }()
     
     private class var videoImage: UIImage? {
-        let bundle = Bundle(for: ImagePickerSheetController.self)
+        let bundle = Bundle(for: MSImagePickerSheetController.self)
         let image = UIImage(named: "PreviewCollectionViewCell-video", in: bundle, compatibleWith: nil)
         
         return image
