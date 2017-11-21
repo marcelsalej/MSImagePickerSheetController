@@ -1,5 +1,5 @@
 PODS:
-  - MSImagePickerSheetController (0.1.3)
+  - MSImagePickerSheetController (0.1.4)
 
 DEPENDENCIES:
   - MSImagePickerSheetController (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  MSImagePickerSheetController: ffa684f252c7752f96b916a04a8e3df7ee3b9b62
+  MSImagePickerSheetController: 1dbb71d46e9a4329d7d3d033ed98a87af8e07c31
 
 PODFILE CHECKSUM: 90c4f7a086f0736a23504532ed9e6768420b49d7
 

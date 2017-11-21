@@ -32,9 +32,9 @@ This is an ImagePickerSheetController initially developed by ibrndnr converted t
 
   s.source_files = 'MSImagePickerSheetController/Classes/**/*'
   
-    s.resource_bundles = {
-        'MSImagePickerSheetController' => ['MSImagePickerSheetController/Resources/*.xcassets']
-    }
+
+    s.resources = 'MSImagePickerSheetController/Assets/*.xcassets'
+
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

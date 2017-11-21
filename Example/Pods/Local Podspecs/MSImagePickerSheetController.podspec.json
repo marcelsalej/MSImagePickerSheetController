@@ -1,6 +1,6 @@
 {
   "name": "MSImagePickerSheetController",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "summary": "ImagePickerSheetController updated to Swift 4",
   "xcconfig": {
     "SWIFT_VERSION": "4.0"
@@ -16,16 +16,12 @@
   },
   "source": {
     "git": "https://github.com/salkovich/MSImagePickerSheetController.git",
-    "tag": "0.1.3",
+    "tag": "0.1.4",
     "branch": "master"
   },
   "platforms": {
     "ios": "9.0"
   },
   "source_files": "MSImagePickerSheetController/Classes/**/*",
-  "resource_bundles": {
-    "MSImagePickerSheetController": [
-      "MSImagePickerSheetController/Assets/*.xcassets"
-    ]
-  }
+  "resources": "MSImagePickerSheetController/Assets/*.xcassets"
 }
